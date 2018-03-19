@@ -156,7 +156,7 @@ public class RSkill extends Skill {
 					@example("startR") }))
 	
 	public String startR(final IScope scope) {
-		initEnv(scope);
+//		initEnv(scope);
 
 		re = Rengine.getMainEngine();
 
@@ -315,11 +315,15 @@ public class RSkill extends Skill {
 //		}
 	}
 	public REXP Reval(final IScope scope, final String cmd) {
-		re=Rengine.getMainEngine();
-		
-		if(re==null) {			
-			return null;
+		try {			
+			re=Rengine.getMainEngine();
+			if(re==null) {			
+				return null;
+			}
+		}catch(Exception ex) {
+			throw GamaRuntimeException.error("R cannot be found ...", scope);
 		}
+		
 
 
 
