@@ -156,7 +156,7 @@ public class RSkill extends Skill {
 					@example("startR") }))
 	
 	public String startR(final IScope scope) {
-//		initEnv(scope);
+		initEnv(scope);
 
 		re = Rengine.getMainEngine();
 
