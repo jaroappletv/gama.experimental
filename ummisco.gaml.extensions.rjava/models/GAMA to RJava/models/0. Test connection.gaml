@@ -22,7 +22,7 @@ global skills:[RSkill]{
 		write "On MACOSX, in the file .bash_profile, add the line 'export R_HOME=\"/Library/Frameworks/R.framework/Resources/\"'";
 		write "";
 		write "In GAMA, you should change the Preferences to set the path to RScript to the file:" color: #red;
-		write " on Mac:      $R_HOME/library/rJava/jri/ rlibjri.jnilib";
+		write " on Mac:      $R_HOME/library/rJava/jri/rlibjri.jnilib";
 		write " on Windows:  $R_HOME/library/rJava/jri/jri.dll";
 		write " on Ubuntu:   $R_HOME/library/rJava/jri/libjri.so";
 		
