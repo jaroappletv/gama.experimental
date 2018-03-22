@@ -8,20 +8,14 @@
 model Testconnection
 
 global skills:[RSkill]{
-	file Rcode<-text_file("r.txt");
 	
 	init{
 		do startR;
-	/* 	write R_eval("x<-1");
-		loop s over:Rcode.contents{
-			unknown a<- R_eval(s);
-			write "R>"+s;
-			write a;
-		}*/
+		write R_eval("x<-1");
+		write R_eval("rnorm(50,0,5)");
 	}
 	
 }
 experiment RJava type:gui{
-	output{
-	}
+	output{}
 }
